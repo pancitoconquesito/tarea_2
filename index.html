@@ -28,84 +28,84 @@
                 <div class="card shadow-lg p-3 mb-5 d-block" id="card_formulario">
                     <div class="card-header display-3 text-center my-5 bg-secondary text-light">Formulario</div>    
                     <div class="card-body">
-                        <!-- method="post" -->
-                        <form class="row g-3 needs-validation was-validated"  id="form_test" novalidate>
+                        <form class="row g-3 needs-validation was-validated" method="post" id="form_test" novalidate>
                             <ul class="list-unstyled">
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
                                     <label for="nombre" class="form-label">Nombre Completo</label>
                                     <!-- dare por hecho que no puede existir un nombre completo con un minimo de largo 20, se aceptan espacios y letras amyusculas y minusculas -->
-                                    <input type="text" class="form-control" id="nombre" pattern="^[a-zA-Z\s]*" minlength="20" placeholder="Ingrese nombre completo. minimo 20 caracteres." required>
+                                    <input type="text" class="form-control text_reset" id="nombre" pattern="^[a-zA-Z\s]*" minlength="20" placeholder="Ingrese nombre completo. minimo 20 caracteres." required>
                                     <div class="valid-feedback">Correcto</div>
                                     <div class="invalid-feedback">Valor inválido</div>
                                 </li>
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
                                     <label for="rut" class="form-label">Rut</label>
                                     <!-- patron de 7 u 8 digitos, seguido de '-' y finalmente con 1 digito o k -->
-                                    <input type="text" class="form-control" id="rut" pattern="\d{7,8}-[\d|kK]{1}" maxlength="10" placeholder="Ingrese su rut en formato 11111111-1" required>
+                                    <input type="text" class="form-control text_reset" id="rut" pattern="\d{7,8}-[\d|kK]{1}" maxlength="10" placeholder="Ingrese su rut en formato 11111111-1" required>
                                     <div class="valid-feedback">Correcto</div>
                                     <div class="invalid-feedback">Valor inválido</div>
                                 </li>
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
                                     <label for="correo" class="form-label">Correo Electrónico</label>
-                                    <input type="email" class="form-control" id="correo" placeholder="Ingrese su email..." required>
+                                    <input type="email" class="form-control text_reset" id="correo" placeholder="Ingrese su email..." required>
                                     <div class="valid-feedback">Correcto</div>
                                     <div class="invalid-feedback">Valor inválido</div>
                                 </li>
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
                                     <label for="telefono" class="form-label">Teléfono Móvil</label>
-                                    <input type="tel" class="form-control" id="telefono" pattern="[0-9]{9}" maxlength="9" minlength="9" placeholder="Ingrese su número telefonico formato 123456789" required>
+                                    <input type="tel" class="form-control text_reset" id="telefono" pattern="[0-9]{9}" maxlength="9" minlength="9" placeholder="Ingrese su número telefonico formato 123456789" required>
                                     <div class="valid-feedback">Correcto</div>
                                     <div class="invalid-feedback">Valor inválido</div>
                                 </li>
+
                                 <li class="col-md-10 offset-md-1  align-self-center my-3" >
                                     <label class="form-check-label col-md-12 mb-3 mt-4" >Seleccionar uno o más lenguajes de programación de un interés</label>
                 
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="python">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="python">
                                         <label class="form-check-label" for="python">Python</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="typescript">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="typescript">
                                         <label class="form-check-label" for="typescript">TypeScript</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="cpp">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="cpp">
                                         <label class="form-check-label" for="cpp">C++</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="cs">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="cs">
                                         <label class="form-check-label" for="cs">C#</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="php">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="php">
                                         <label class="form-check-label" for="php">PHP</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="ruby">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="ruby">
                                         <label class="form-check-label" for="ruby">Ruby on Rails</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="java">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="java">
                                         <label class="form-check-label" for="java">Java</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="r">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="r">
                                         <label class="form-check-label" for="r">R</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="groovy">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="groovy">
                                         <label class="form-check-label" for="groovy">Groovy</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="go">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="go">
                                         <label class="form-check-label" for="go">Go</label>
                                     </div>
                                     <div class="form-check is-invalid cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="swift">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="swift">
                                         <label class="form-check-label" for="swift">Swift</label>
                                     </div>
                                     <div class="form-check cl_lenguaje">
-                                        <input class="form-check-input cl_lenguaje_i" type="checkbox" value="" id="kotlin">
+                                        <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="kotlin">
                                         <label class="form-check-label " for="kotlin">Kotlin</label>
                                     </div>
                                     <div class="valid-feedback" id="cl_lenguaje_valid">Correcto</div>
@@ -115,15 +115,15 @@
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
                                     <label class="form-check-label col-md-12 mb-3 mt-4">Cúal es su nivel de experiencia en programación? </label>
                                     <div class=" form-check is-invalid r_nivel_valid">
-                                        <input class="form-check-input" type="radio" name="nivel" id="alto">
+                                        <input class="form-check-input check_reset" type="radio" name="nivel" id="alto">
                                         <label class="form-check-label" for="alto">Alto</label>
                                     </div>
                                     <div class="form-check is-invalid r_nivel_valid">
-                                        <input class="form-check-input" type="radio" name="nivel" id="medio">
+                                        <input class="form-check-input check_reset" type="radio" name="nivel" id="medio">
                                         <label class="form-check-label" for="medio">Medio</label>
                                     </div>
                                     <div class="form-check is-invalid r_nivel_valid">
-                                        <input class="form-check-input " type="radio" name="nivel" id="bajo">
+                                        <input class="form-check-input check_reset" type="radio" name="nivel" id="bajo">
                                         <label class="form-check-label" for="bajo">Bajo</label>
                                     </div>
                                     <div class="valid-feedback">Correcto</div>
@@ -137,7 +137,7 @@
                                             <label for="nivel_python" class="form-label">Python</label> 
                                         </div>
                                         <div class="col-md-2 col-6 " >
-                                            <p id="nivel_python_p" class="text-info">Nivel [ 5 ]</p>  
+                                            <p id="nivel_python_p" class="text-info range_reset">Nivel [ 5 ]</p>  
                                         </div>
                                         <div class="col-md-8 col-10 " >
                                             <input type="range" class="form-range" min="0" max="10" id="nivel_python">
@@ -149,7 +149,7 @@
                                             <label for="nivel_java" class="form-label">Java</label>
                                         </div>
                                         <div class="col-md-2 col-6 " >
-                                            <p id="nivel_java_p" class="text-info">Nivel [ 5 ]</p>  
+                                            <p id="nivel_java_p" class="text-info range_reset">Nivel [ 5 ]</p>  
                                         </div>
                                         <div class="col-md-8 col-10 " >
                                             <input type="range" class="form-range" min="0" max="10" id="nivel_java">
@@ -161,7 +161,7 @@
                                             <label for="nivel_cpp" class="form-label">C++</label>
                                         </div>
                                         <div class="col-md-2 col-6 " >
-                                            <p id="nivel_cpp_p" class="text-info">Nivel [ 5 ]</p>  
+                                            <p id="nivel_cpp_p" class="text-info range_reset">Nivel [ 5 ]</p>  
                                         </div>
                                         <div class="col-md-8 col-10 " >
                                             <input type="range" class="form-range" min="0" max="10" id="nivel_cpp">
@@ -173,22 +173,22 @@
                                     <label class="form-check-label col-md-12 mb-3 mt-4">Seleccione cúal de los siguientes cursos les ha tomado mayor dificultad</label>
                 
                                     <div class="form-check is-invalid check_dificil_valid">
-                                        <input class="form-check-input check_dificil_i" type="checkbox" value="" id="estructura">
+                                        <input class="form-check-input check_dificil_i check_reset" type="checkbox" value="" id="estructura">
                                         <label class="form-check-label" for="estructura">Estructura de Datos</label>
                                     </div>
                 
                                     <div class="form-check is-invalid check_dificil_valid">
-                                        <input class="form-check-input check_dificil_i" type="checkbox" value="" id="ia">
+                                        <input class="form-check-input check_dificil_i check_reset" type="checkbox" value="" id="ia">
                                         <label class="form-check-label" for="ia">Inteligencia Artificial</label>
                                     </div>
                 
                                     <div class="form-check is-invalid check_dificil_valid">
-                                        <input class="form-check-input check_dificil_i" type="checkbox" value="" id="interaccion">
+                                        <input class="form-check-input check_dificil_i check_reset" type="checkbox" value="" id="interaccion">
                                         <label class="form-check-label" for="interaccion">Interación Humano-Computador</label>
                                     </div>
                 
                                     <div class="form-check is-invalid check_dificil_valid">
-                                        <input class="form-check-input check_dificil_i" type="checkbox" value="" id="so">
+                                        <input class="form-check-input check_dificil_i check_reset" type="checkbox" value="" id="so">
                                         <label class="form-check-label" for="so">Sistemas Operativos</label>
                                     </div>
                                     <div class="row">
@@ -196,7 +196,7 @@
                                             <label for="Otro" class="form-label">Otro</label>
                                         </div>
                                         <div class="col-10 ">
-                                            <input type="text" minlength="5" class="form-control" id="otro" placeholder="Ingrese Otro nombre de curso minimo 5 caracteres...">
+                                            <input type="text" minlength="5" class="form-control text_reset" id="otro" placeholder="Ingrese Otro nombre de curso minimo 5 caracteres...">
                                         </div>
                                     </div>
                                     <div class="valid-feedback" id="cl_lenguaje_valid">Correcto</div>
@@ -208,14 +208,14 @@
                                 <li class="col-md-10 offset-md-1 align-self-center my-5">
                                     <div class="form-group is-invalid " id="textarea_valid">
                                         <label for="opinion">Queremos conocer su opinión acerca de la escuela</label>
-                                        <textarea class="form-control" id="opinion" rows="3" cols="100" maxlength="500" required minlength="50"></textarea>
+                                        <textarea class="form-control text_reset" id="opinion" rows="3" cols="100" maxlength="500" required minlength="50"></textarea>
                                     </div>
                                     <div class="valid-feedback">Correcto</div>
                                     <div class="invalid-feedback">Ingresa un minimo de 50 caracteres</div>
                                 </li>
                                 <li class="col-md-10 offset-md-1 align-self-center my-5 ">
                                     <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
-                                    <button class="btn btn-secondary btn-lg" type="button">Cancelar</button>
+                                    <button class="btn btn-secondary btn-lg " id="btn_cancelar" type="button">Cancelar</button>
                                 </li>
                             </ul>
                         </form>
@@ -235,3 +235,4 @@
     <script data-main="js/app" src="js/require-jquery.js"></script>
 </body>
 </html>
+

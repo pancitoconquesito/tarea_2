@@ -11,15 +11,12 @@ define(["require", "exports", "jquery"], function (require, exports, jquery) {
             .forEach(function (form) {
             form.addEventListener('submit', function (event) {
                 if (!form.checkValidity()) {
+                    alert("Faltan campos a completar");
                     event.preventDefault();
                     event.stopPropagation();
                 }
                 else {
-                    var _mensaje_ = document.getElementById("card_mensaje");
-                    var _formulario_ = document.getElementById("card_formulario");
-                    _mensaje_.classList.replace('d-none', 'd-block');
-                    _formulario_.classList.replace('d-block', 'd-none');
-                    console.debug("listo!");
+                    mostrarMensajeExitoso();
                     event.preventDefault();
                     event.stopPropagation();
                 }
@@ -27,6 +24,13 @@ define(["require", "exports", "jquery"], function (require, exports, jquery) {
             }, false);
         });
     })();
+    var _mensaje_ = document.getElementById("card_mensaje");
+    var _formulario_ = document.getElementById("card_formulario");
+    function mostrarMensajeExitoso() {
+        _mensaje_.classList.replace('d-none', 'd-block');
+        _formulario_.classList.replace('d-block', 'd-none');
+    }
+    ;
     var _cl_lenguaje = document.getElementsByClassName("cl_lenguaje");
     var cl_lenguaje_i_ = document.getElementsByClassName("cl_lenguaje_i");
     var _r_nivel_valid = document.getElementsByClassName("r_nivel_valid");
@@ -91,4 +95,22 @@ define(["require", "exports", "jquery"], function (require, exports, jquery) {
                     _check_dificil_valid[k].classList.replace('is-valid', 'is-invalid');
         });
     }
+    var btn_cancelar_ = document.getElementById("btn_cancelar");
+    btn_cancelar_.addEventListener("click", limpiarDatos);
+    function limpiarDatos() {
+        //enlistar los input
+        var lista_text = document.getElementsByClassName("text_reset");
+        var lista_range = document.getElementsByClassName("range_reset");
+        var lista_Check = document.getElementsByClassName("check_reset");
+        for (var i = 0; i < lista_text.length; i++)
+            lista_text[i].value = "";
+        for (var i = 0; i < lista_range.length; i++) {
+            lista_range[i].value = 5;
+            lista_range[i].valueAsNumber = 10;
+            lista_range[i].innerHTML = "Nivel [ " + String(lista_range[i].value) + " ]";
+        }
+        for (var i = 0; i < lista_Check.length; i++)
+            lista_Check[i].checked = false;
+    }
+    ;
 });

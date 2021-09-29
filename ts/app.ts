@@ -9,27 +9,25 @@ const $:JQueryStatic=jquery;
       .forEach(function (form) {
         form.addEventListener('submit', function (event:any) {
           if (!form.checkValidity()) {
+            alert("Faltan campos a completar");
             event.preventDefault()
             event.stopPropagation()
           }else{
-            const _mensaje_:any=document.getElementById("card_mensaje");
-            const _formulario_:any=document.getElementById("card_formulario");
-            _mensaje_.classList.replace('d-none', 'd-block');
-            _formulario_.classList.replace('d-block','d-none');
-
-            console.debug("listo!");
+            mostrarMensajeExitoso();
             event.preventDefault()
             event.stopPropagation()
           }
-  
           form.classList.add('was-validated')
         }, false)
       })
   })()
 
-
-
-
+const _mensaje_:any=document.getElementById("card_mensaje");
+const _formulario_:any=document.getElementById("card_formulario");
+function mostrarMensajeExitoso(): void {
+  _mensaje_.classList.replace('d-none', 'd-block');
+  _formulario_.classList.replace('d-block','d-none');
+};
 const _cl_lenguaje:any=document.getElementsByClassName("cl_lenguaje");
 const cl_lenguaje_i_:any=document.getElementsByClassName("cl_lenguaje_i");
 const _r_nivel_valid:any= document.getElementsByClassName("r_nivel_valid");
@@ -97,6 +95,20 @@ for(let i=0;i<_check_dificil_valid.length;i++){
   });
 }
   
-  
+const btn_cancelar_:any=document.getElementById("btn_cancelar");
+btn_cancelar_.addEventListener("click", limpiarDatos);
+function limpiarDatos(): void{
+  //enlistar los input
+  const lista_text:any=document.getElementsByClassName("text_reset");
+  const lista_range:any=document.getElementsByClassName("range_reset");
+  const lista_Check:any=document.getElementsByClassName("check_reset");
+  for(let i=0;i<lista_text.length;i++)  lista_text[i].value="";
+  for(let i=0;i<lista_range.length;i++){
+    lista_range[i].value=5;
+    lista_range[i].valueAsNumber=10;
+    lista_range[i].innerHTML="Nivel [ "+String(lista_range[i].value)+" ]";
+  }  
+  for(let i=0;i<lista_Check.length;i++)  lista_Check[i].checked=false;
+};
   
   
