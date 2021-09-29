@@ -1,4 +1,9 @@
 body {
   background-image: linear-gradient(to left bottom, #37598b, #007db0, #00a3c9, #00c8d3, #12ebce); }
 
+.titulo_label {
+  font-size: 1.2em;
+  color: #00a1c5;
+  font-weight: bolder; }
+
 /*# sourceMappingURL=formulario.css.map */

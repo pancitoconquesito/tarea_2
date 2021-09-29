@@ -31,34 +31,34 @@
                         <form class="row g-3 needs-validation was-validated" method="post" id="form_test" novalidate>
                             <ul class="list-unstyled">
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
-                                    <label for="nombre" class="form-label">Nombre Completo</label>
+                                    <label for="nombre" class="form-label titulo_label">Nombre Completo</label>
                                     <!-- dare por hecho que no puede existir un nombre completo con un minimo de largo 20, se aceptan espacios y letras amyusculas y minusculas -->
                                     <input type="text" class="form-control text_reset" id="nombre" pattern="^[a-zA-Z\s]*" minlength="20" placeholder="Ingrese nombre completo. minimo 20 caracteres." required>
                                     <div class="valid-feedback">Correcto</div>
                                     <div class="invalid-feedback">Valor inválido</div>
                                 </li>
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
-                                    <label for="rut" class="form-label">Rut</label>
+                                    <label for="rut" class="form-label titulo_label">Rut</label>
                                     <!-- patron de 7 u 8 digitos, seguido de '-' y finalmente con 1 digito o k -->
                                     <input type="text" class="form-control text_reset" id="rut" pattern="\d{7,8}-[\d|kK]{1}" maxlength="10" placeholder="Ingrese su rut en formato 11111111-1" required>
                                     <div class="valid-feedback">Correcto</div>
                                     <div class="invalid-feedback">Valor inválido</div>
                                 </li>
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
-                                    <label for="correo" class="form-label">Correo Electrónico</label>
+                                    <label for="correo" class="form-label titulo_label">Correo Electrónico</label>
                                     <input type="email" class="form-control text_reset" id="correo" placeholder="Ingrese su email..." required>
                                     <div class="valid-feedback">Correcto</div>
                                     <div class="invalid-feedback">Valor inválido</div>
                                 </li>
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
-                                    <label for="telefono" class="form-label">Teléfono Móvil</label>
+                                    <label for="telefono" class="form-label titulo_label">Teléfono Móvil</label>
                                     <input type="tel" class="form-control text_reset" id="telefono" pattern="[0-9]{9}" maxlength="9" minlength="9" placeholder="Ingrese su número telefonico formato 123456789" required>
                                     <div class="valid-feedback">Correcto</div>
                                     <div class="invalid-feedback">Valor inválido</div>
                                 </li>
 
                                 <li class="col-md-10 offset-md-1  align-self-center my-3" >
-                                    <label class="form-check-label col-md-12 mb-3 mt-4" >Seleccionar uno o más lenguajes de programación de un interés</label>
+                                    <label class="form-check-label col-md-12 mb-3 mt-4 titulo_label" >Seleccionar uno o más lenguajes de programación de un interés</label>
                 
                                     <div class="form-check is-invalid cl_lenguaje">
                                         <input class="form-check-input cl_lenguaje_i check_reset" type="checkbox" value="" id="python">
@@ -113,7 +113,7 @@
                                 </li>
                                 
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
-                                    <label class="form-check-label col-md-12 mb-3 mt-4">Cúal es su nivel de experiencia en programación? </label>
+                                    <label class="form-check-label col-md-12 mb-3 mt-4 titulo_label">Cúal es su nivel de experiencia en programación? </label>
                                     <div class=" form-check is-invalid r_nivel_valid">
                                         <input class="form-check-input check_reset" type="radio" name="nivel" id="alto">
                                         <label class="form-check-label" for="alto">Alto</label>
@@ -131,7 +131,7 @@
                                 </li>
 
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
-                                    <label class="form-check-label col-md-12 mb-2 mt-4">Nivel de conocimiento sobre los siguientes lenguajes de programación (del 0 al 10)</label> 
+                                    <label class="form-check-label col-md-12 mb-2 mt-4 titulo_label">Nivel de conocimiento sobre los siguientes lenguajes de programación (del 0 al 10)</label> 
                                     <div class="row">
                                         <div class="col-md-2 col-6 ">
                                             <label for="nivel_python" class="form-label">Python</label> 
@@ -170,7 +170,7 @@
                                 </li>
                                 
                                 <li class="col-md-10 offset-md-1  align-self-center my-3">
-                                    <label class="form-check-label col-md-12 mb-3 mt-4">Seleccione cúal de los siguientes cursos les ha tomado mayor dificultad</label>
+                                    <label class="form-check-label col-md-12 mb-3 mt-4 titulo_label">Seleccione cúal de los siguientes cursos les ha tomado mayor dificultad</label>
                 
                                     <div class="form-check is-invalid check_dificil_valid">
                                         <input class="form-check-input check_dificil_i check_reset" type="checkbox" value="" id="estructura">
@@ -207,7 +207,7 @@
                                 <!-- tendrá un minimo de 50 caracteres como requisito -->
                                 <li class="col-md-10 offset-md-1 align-self-center my-5">
                                     <div class="form-group is-invalid " id="textarea_valid">
-                                        <label for="opinion">Queremos conocer su opinión acerca de la escuela</label>
+                                        <label for="opinion" class="titulo_label">Queremos conocer su opinión acerca de la escuela</label>
                                         <textarea class="form-control text_reset" id="opinion" rows="3" cols="100" maxlength="500" required minlength="50"></textarea>
                                     </div>
                                     <div class="valid-feedback">Correcto</div>

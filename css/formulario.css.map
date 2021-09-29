@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,IAAI;EACA,gBAAgB,EAAE,4EAA4E",
+"mappings": "AAAA,IAAI;EACA,gBAAgB,EAAE,4EAA4E;;AAElG,aAAa;EACT,SAAS,EAAE,KAAK;EAChB,KAAK,EAAE,OAAO;EACd,WAAW,EAAE,MAAM",
 "sources": ["../scss/formulario.scss"],
 "names": [],
 "file": "formulario.css"
