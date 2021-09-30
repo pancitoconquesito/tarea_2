@@ -111,6 +111,16 @@ define(["require", "exports", "jquery"], function (require, exports, jquery) {
         }
         for (var i = 0; i < lista_Check.length; i++)
             lista_Check[i].checked = false;
+        for (var i = 0; i < _cl_lenguaje.length; i++) {
+            _cl_lenguaje[i].classList.replace('is-valid', 'is-invalid');
+        }
+        for (var i = 0; i < _r_nivel_valid.length; i++) {
+            _r_nivel_valid[i].classList.replace('is-valid', 'is-invalid');
+        }
+        for (var i = 0; i < _check_dificil_valid.length; i++) {
+            _check_dificil_valid[i].classList.replace('is-valid', 'is-invalid');
+        }
+        _textarea_valid.classList.replace('is-valid', 'is-invalid');
     }
     ;
 });
